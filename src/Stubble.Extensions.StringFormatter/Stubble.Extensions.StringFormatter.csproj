@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Stubble\src\Stubble.Core\Stubble.Core.csproj" />
+    <ProjectReference Include="..\..\..\Stubble\src\Stubble.Core\Stubble.Core.csproj" />
   </ItemGroup>
   
   <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
