@@ -2,10 +2,6 @@
 
 This repository extends the mustache syntax to support string formatting by replacing the built in interpolation token renderer.
 
-It relies on a slightly updated Stubble.Core build which makes a few internal structures public to allow the extension to work.
-
-To use this just download the updated Stubble.Core, build the solution and include the release dll in your project.
-
 Example Usage:
 ```csharp
 
@@ -32,9 +28,3 @@ Example Usage:
 			}
 
 ```
-# TODO
-Test project
-
-## Credits
-
-Me Myself and I
