@@ -3,13 +3,13 @@
   <PropertyGroup>
     <TargetFrameworks>net45;netstandard20</TargetFrameworks>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Stubble\src\Stubble.Core\Stubble.Core.csproj" />
-  </ItemGroup>
   
   <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
     <Reference Include="System" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Stubble.Core" Version="1.9.3" />
   </ItemGroup>
   
   <ItemGroup>
