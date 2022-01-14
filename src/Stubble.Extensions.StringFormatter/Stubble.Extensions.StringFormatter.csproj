@@ -1,10 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+ <PropertyGroup>
+    <Copyright>Copyright © 2022</Copyright>
+    <Authors>Emanuele Zavallone</Authors>
+    <LangVersion>7.3</LangVersion>
+    <Description>Extensions to Stubble adding support for string formatting</Description>
+    <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
+    <PackageTags>template;mustache;text;generation;fast;extension;stubble-extension</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/emazv72/Stubble.Extensions.StringFormatter</RepositoryUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/StubbleOrg/Stubble/master/assets/extension-logo-64.png</PackageIconUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
   <PropertyGroup>
-    <TargetFrameworks>net45;netstandard20</TargetFrameworks>
+    <TargetFrameworks>net472;netstandard20</TargetFrameworks>
   </PropertyGroup>
   
-  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
     <Reference Include="System" />
   </ItemGroup>
   
