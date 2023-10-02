@@ -74,7 +74,17 @@ namespace Stubble.Extensions.StringFormatter
 		/// <inheritdoc/>
 		protected override async Task WriteAsync(StringRender renderer, InterpolationToken obj, Context context)
 		{
-			var value = context.Lookup(obj.Content.ToString());
+			var content = obj.Content.ToString();
+			string format = null;
+
+			var pos = content.IndexOf(':');
+			if (pos > 0)
+			{
+				format = content.Substring(pos + 1);
+				content = content.Substring(0, pos);
+			}
+
+			var value = context.Lookup(content);
 
 			var functionValueDynamic = value as Func<dynamic, object>;
 			var functionValue = value as Func<object>;
@@ -92,9 +102,11 @@ namespace Stubble.Extensions.StringFormatter
 				value = resultString;
 			}
 
+			var formattedValue = ApplyFormat(value, format);
+
 			if (!context.RenderSettings.SkipHtmlEncoding && obj.EscapeResult && value != null)
 			{
-				value = WebUtility.HtmlEncode(value.ToString());
+				formattedValue = WebUtility.HtmlEncode(formattedValue);
 			}
 
 			if (obj.Indent > 0)
@@ -102,7 +114,7 @@ namespace Stubble.Extensions.StringFormatter
 				renderer.Write(' ', obj.Indent);
 			}
 
-			renderer.Write(value?.ToString());
+			renderer.Write(formattedValue);
 		}
 	}
 }
