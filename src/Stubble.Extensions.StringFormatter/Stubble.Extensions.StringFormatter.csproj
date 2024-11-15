@@ -25,6 +25,7 @@
   </ItemGroup>
   
   <ItemGroup>
+	<PackageReference Include="Nerdbank.GitVersioning" Version="3.6.146" PrivateAssets="All" />
     <PackageReference Include="Stubble.Core-private" Version="1.11.1" />
   </ItemGroup>
   
