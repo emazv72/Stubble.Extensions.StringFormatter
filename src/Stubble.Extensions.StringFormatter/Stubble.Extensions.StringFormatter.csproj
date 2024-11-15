@@ -18,7 +18,7 @@
     <TargetFrameworks>net472;netstandard20</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Stubble extension adding support for string formatting</Title>
-    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionPrefix>1.1</VersionPrefix>
     <UserSecretsId>e6e5a72e-a358-4daa-94b7-fffcc7e62722</UserSecretsId>
   </PropertyGroup>
   
@@ -27,7 +27,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Stubble.Core" Version="1.10.8" />
+    <PackageReference Include="Stubble.Core-private" Version="1.11.1" />
   </ItemGroup>
   
   <ItemGroup>
