@@ -6,7 +6,7 @@
     <LangVersion>7.3</LangVersion>
     <Description>Stubble extension adding support for string formatting</Description>
     <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
-    <PackageId>Stubble.Extensions.StringFormatter</PackageId>
+    <PackageId>Stubble.Extensions.StringFormatter-private</PackageId>
     <PackageTags>template;mustache;text;generation;fast;extension;stubble-extension</PackageTags>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/emazv72/Stubble.Extensions.StringFormatter</RepositoryUrl>
@@ -18,8 +18,6 @@
     <TargetFrameworks>net472;netstandard20</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Stubble extension adding support for string formatting</Title>
-    <VersionPrefix>1.1</VersionPrefix>
-    <UserSecretsId>e6e5a72e-a358-4daa-94b7-fffcc7e62722</UserSecretsId>
   </PropertyGroup>
   
   <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
